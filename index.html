@@ -10,17 +10,24 @@
   <body>
 
 
-<div>
-  <label id="label1"></label> +
-  <label id="label2"></label> =
-  <input type="number" name="number" id="inputNumber" >
 
-  <input type="button" name="submit"  value="Send" id="inputButton" onclick="getInputButton()">
-  <button onclick="getButton()">Neues Rätsel</button>
-</div>
+    <div>
+      <img src=".//assets/img/prima.webp" alt="" id="imgPrima" class="imgPrima1"> <br>
+      <img src=".//assets/img/1200px-Sad_smiley_yellow_simple.svg.png" alt="" id="imgSad" class="imgSad1"> <br>
+      <img src="./assets/img/doodle-Question-Mark-Graphics-8494778-1.jpeg" alt="" id="imgQuestion" class="imgQuestion1">
+    </div>
+
+    <div>
+      <label id="label1"></label> +
+      <label id="label2"></label> =
+      <input type="number" name="number" id="inputNumber" placeholder="Antwort" required >
+    
+      <input type="button" name="submit"  value="Go" id="inputButton" >
+      <button id="buttonRetsel">Neues Rätsel</button>
+    </div>
  
-
-<p id="ergebnis">-----</p>
+<br>
+<p id="ergebnis"></p>
 
 
     <!-- External script -->

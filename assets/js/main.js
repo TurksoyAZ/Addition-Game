@@ -1,40 +1,63 @@
-
-
+//outputs
 let label1 = document.getElementById("label1");
 let label2 = document.getElementById("label2");
+let ergebnis = document.getElementById("ergebnis");
+let body = document.querySelector("body");
+
+//inputs
+let inputButton = document.getElementById("inputButton");
 let inputNumber = document.getElementById("inputNumber");
-let ergebnis= document.getElementById("ergebnis")
 
+//imgs (zusätzlich)
+let imgPrima = document.getElementById("imgPrima");
+let imgSad = document.getElementById("imgSad");
+let imgQuestion = document.getElementById("imgQuestion");
 
-let num1=100
-let a =Math.ceil(Math.random() * num1) 
-let num2=100
-let b = Math.ceil(Math.random() * num2) 
-let c = a + b 
+//function x2
+document.querySelector("button").addEventListener("click", function () {
+  let num1 = Math.floor(Math.random() * 100);
+  let num2 = Math.floor(Math.random() * 100);
+  label1.innerHTML = num1;
+  label2.innerHTML = num2;
+  label1.style.color = "black";
+  label2.style.color = "black";
+  let finish = num1 + num2;
 
-function getButton(){
-  
-  label1.innerHTML=a
-  label2.innerHTML=b
+  if ("button") {
+    inputNumber.value = "";
+    ergebnis.innerHTML = "";
+    ergebnis.style.color = "black";
+    imgPrima.style.display = "none";
+    imgSad.style.display = "none";
+    imgQuestion.style.display = "none";
+  }
 
-}
-
-function getInputButton(){
-
-  if(c == inputNumber.value ) {
-    ergebnis.innerHTML = ' <q> Das Stimmt </q>'
-    ergebnis.style.color= 'lightgreen'
-    label1.innerHTML=""
-    label2.innerHTML=""
-    inputNumber.value=""
-    
-  } else if( c != inputNumber.value) {
-    ergebnis.innerHTML = '<q> Das ist leider falsch </q>'
-    ergebnis.style.color='red'
-    label1.innerHTML=""
-    label2.innerHTML=""
-    inputNumber.value=""
-  } 
-  
-
-}
+  inputButton.addEventListener("click", function () {
+    if (finish == inputNumber.value) {
+      ergebnis.innerHTML = "<q>Das ist Stimmt</q>";
+      ergebnis.style.color = "lightgreen";
+      ergebnis.style.backgroundColor = "white";
+      ergebnis.style.borderRadius = "5px";
+      imgPrima.style.display = "block";
+      imgSad.style.display = "none";
+      imgQuestion.style.display = "none";
+    } else if (finish != inputNumber.value) {
+      ergebnis.innerHTML = "<q>Das ist leider falsch</q>";
+      ergebnis.style.color = "red";
+      ergebnis.style.backgroundColor = "white";
+      ergebnis.style.borderRadius = "5px";
+      imgSad.style.display = "block";
+      imgQuestion.style.display = "none";
+      imgPrima.style.display = "none";
+    }
+    if (inputNumber.value == "") {
+      ergebnis.innerHTML = "<q>Geben Sie bitte Ihre Antwort ein</q>";
+      ergebnis.style.color = "rgb(105, 19, 175)";
+      ergebnis.style.backgroundColor = "white";
+      ergebnis.style.borderRadius = "5px";
+      imgQuestion.style.display = "block";
+      imgSad.style.display = "none";
+      imgPrima.style.display = "none";
+    }
+  });
+});
