@@ -61,3 +61,45 @@ document.querySelector("button").addEventListener("click", function () {
     }
   });
 });
+
+
+
+
+
+
+// 2 part
+
+//outputs
+// let label1 = document.getElementById("label1");
+// let label2 = document.getElementById("label2");
+// let ergebnis = document.getElementById("ergebnis");
+
+// let inputNumber = document.getElementById("inputNumber");
+
+
+// Variables
+// let matRandom1;
+// let matRandom2;
+// let antwort;
+
+
+// function neuesButton(){
+
+//   matRandom1 = Math.floor(Math.random() * 100)
+//   matRandom2 = Math.floor(Math.random() * 100)
+//   antwort = matRandom1+matRandom2;
+
+//   label1.innerHTML=matRandom1
+//   label2.innerHTML=matRandom2
+//   inputNumber.value=""
+//   ergebnis.innerHTML=""
+// }
+
+// function sendInput(){
+//   if(antwort == inputNumber.value){
+//     ergebnis.innerHTML="Das stimmt"
+//   }
+//   if(antwort != inputNumber.value){
+//     ergebnis.innerHTML= "Das ist leider falsch"
+//   }
+// }
